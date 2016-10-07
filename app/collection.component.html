@@ -1,0 +1,110 @@
+<div class="W100per">
+  <div class="assetImage" *ngFor="let item of assetItems" draggable="true" (dragstart)="dragAsset($event,item)">
+    <img src="{{item.AssetImageURl}}" alt="Norway" style="width:100%;">
+    <div class="assetImageText">
+      <p>{{item.name}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="clearBoth">&nbsp;</div>
+<div>
+  <div class="W50per FL">
+    <label>{{errMsg}}</label>
+  </div>
+  <div class="W50per FR">
+    <button id="toggleBtn" type="button" class="FR" (click)="Toggle($event)" title="{{toggleButton}}">{{toggleButton}}</button>
+  </div>
+</div>
+
+
+<div class="clearBoth H10px">&nbsp;</div>
+<div class="FL W1000" *ngIf="isClassVisible">
+  <div class="panel panel-default FL W1000">
+    <div class="panel-heading">
+      <ul class="tab">
+        <li *ngFor="let tab of tabs">
+          <div class="tabHeaderdiv" [class.active]="tab==selectedTab">
+            <a href="#" class="tablinks" (click)="onCollectionClick($event, tab);" (dblclick)="renameCollection($event, tab)">{{tab.name + ' ('+tab.coutnOfChilds+')'}}</a>
+            <button type="button" class="deleteIcon" (click)="deleteCollection($event, tab)"><i class="fa fa-close"></i></button>
+          </div>
+        </li>
+        <li>
+          <div class="tabHeaderdiv"><a href="javascript:void(0);" class="tablinks" (click)="addCollection($event)"><i class="fa collectionAdd"></i>&nbsp;</a></div>
+        </li>
+      </ul>
+    </div>
+    <div class="panel-body" *ngIf="selectedTab" (dragover)="allowDrop($event)" (drop)="dropAsset($event)">
+      <div class="W1000 HorLayout">
+        <div class="CassetImage" *ngFor="let child of selectedTab.Childs" (click)="onSelect($event)">
+          <img src="{{child.AssetImageURl}}" alt="Norway" style="width:100%;">
+          <div class="CassetImageText">
+            <p>{{child.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="myModal" class="ReNamemodal" *ngIf="TabtoRename">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="panel panel-popup FL W100per">
+      <div class="panel-heading FL W100per"> <label class="panel-title">Collection Rename</label></div>
+      <div class="panel-body FL W100per">
+        <div class="PT20 PL20">
+          <label for="txtNewName">Please enter Collection Name</label>
+        </div>
+        <div class="P10 PL20">
+          <input type="text" id="txtNewName" class="txtbox">
+        </div>
+        <div class="P10">
+          <hr>
+        </div>
+        <div class="P10">
+          <div class="FR"><button type="button" class="btn" (click)="btnCloseRename_clickHandler($event)">Close</button></div>
+          <div class="FR PR10"><button type="button" class="btn" (click)="btnRename_clickHandler($event,TabtoRename)">Ok</button></div>
+        </div>
+        <div class="emptyRow">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ConfirmModel" *ngIf="TabtoDelete">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="panel panel-popup FL W400">
+      <div class="panel-heading FL W100per"> <label class="panel-title">Delete Confirmation</label></div>
+      <div class="panel-body FL W100per">
+        <div class="P20">
+          <label>Are you sure you want to delete this collection?</label>
+        </div>
+        <div class="P10 PL20">
+          <div class="FL PR10"><button type="button" class="btn" (click)="btnDelete_clickHandler($event, TabtoDelete)">Ok</button></div>
+          <div class="FL"><button type="button" class="btn" (click)="btnCloseDelete_clickHandler($event)">Close</button></div>
+        </div>
+        <div class="emptyRow">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ConfirmModel" *ngIf="TabtoRemain">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="panel panel-popup FL W100">
+      <div class="panel-heading FL W90"></div>
+      <div class="panel-body FL W90">
+    <label>You may not have fewer than one collection</label>
+    <div>
+      <button type="button" (click)="closePopup($event)">OK</button>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>

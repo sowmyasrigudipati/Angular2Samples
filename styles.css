@@ -1,0 +1,381 @@
+/***********************Tab Styles**********************/
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;
+margin-left:10px;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    padding:5px 15px; 
+    border-radius: 4px 4px 0 0;
+}
+
+/* Change background color of links on hover */
+/*ul.tab li a:hover {}*/
+
+/* Create an active/current tablink class */
+
+/* Style the tab content */
+
+.tabHeaderdiv
+{
+  text-align: left;
+  border-radius: 4px 4px 0 0;
+  border: 1px transparent;
+  margin-top:20px; 
+  background-color: #665d56;
+}
+
+.active{
+
+  text-align: left;
+  border-radius: 4px 4px 0 0;
+  border: 1px transparent;
+  margin-top:20px; 
+  background-color: #2B2B28;
+}
+.active > .deleteIcon
+{
+  background-color: #665d56;
+  border: 1px transparent;
+  color: mintcream;
+  margin-right: 5px;
+  padding: 3px 3px;
+  border-radius: 3px;
+}
+.deleteIcon
+{
+  background-color: #2B2B28;
+  border: 1px transparent;
+  color: mintcream;
+  margin-right: 5px;
+  padding: 3px 3px;
+  border-radius: 3px;
+}
+.collectionAdd{
+  color: #FFFFFF;
+  font-size: 9px !important;
+}
+.collectionAdd:before
+{
+  content: "\f067"
+}
+/**********************************Generanl Styles********************************/
+.clearBoth{
+  clear: both;
+  height: 10px;
+}
+.FL
+{
+  float: left
+}
+.FR
+{
+  float: right;
+}
+.W100per
+{
+  width:100%;
+}
+.H10px
+{
+  height: 10px;
+}
+.emptyRow
+{
+  clear: both;
+  height: 10px;
+}
+
+
+
+/*******************************PopUp Styles**********************************/
+.ReNamemodal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.ConfirmModel{
+  display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    width: 400px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.txtbox
+{
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+
+/**********************pannel css*********************************/
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #555352;
+  border: 1px solid #666A72;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-body {
+  background-color:#2B2B28; 
+  float: left;
+  width: 1000px;
+}
+
+.panel-heading {
+  border-bottom: 1px solid #666A72;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.panel-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: inherit;
+}
+
+.panel-title > a,
+.panel-title > small,
+.panel-title > .small,
+.panel-title > small > a,
+.panel-title > .small > a {
+  color: inherit;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #dddddd;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.panel-default {
+  border-color: #666A72;
+}
+.panel-default > .panel-heading {
+  color: #333333;
+  background-color: #524B50;
+  border-color: #666A72;
+  -webkit-box-shadow: inset 0px -15px 5px -7px rgba(86,86,82,1);
+-moz-box-shadow: inset 0px -15px 5px -7px rgba(86,86,82,1);
+box-shadow: inset 0px -15px 5px -7px rgba(86,86,82,1);
+}
+.panel-default >  .panel-body {
+  min-height: 170px;
+  border-top-color: #dddddd;
+  white-space: nowrap;
+}
+.panel-default > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333333;
+}
+.panel-default > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #dddddd;
+}
+
+.panel-popup {
+  border-color: #000000;
+}
+.panel-popup > .panel-heading {
+  color: #333333;
+  background-color: #524B50;
+  border-color: #000000;
+   background: #93897B;
+     padding-top:10px;
+  padding-bottom:10px;
+
+background: -moz-linear-gradient(top, #93897B 0%, #93897B 45%, #7A7160 66%, #7A7160 75%, #7A7160 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #93897B), color-stop(45%, #93897B), color-stop(66%, #7A7160), color-stop(75%, #7A7160), color-stop(100%, #7A7160));
+background: -webkit-linear-gradient(top, #93897B 0%, #93897B 45%, #7A7160 66%, #7A7160 75%, #7A7160 100%);
+background: -o-linear-gradient(top, #93897B 0%, #93897B 45%, #7A7160 66%, #7A7160 75%, #7A7160 100%);
+background: -ms-linear-gradient(top, #93897B 0%, #93897B 45%, #7A7160 66%, #7A7160 75%, #7A7160 100%);
+background: linear-gradient(to bottom, #93897B 0%, #93897B 45%, #7A7160 66%, #7A7160 75%, #7A7160 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93897B', endColorstr='#7A7160', GradientType=0 );
+}
+.panel-popup >  .panel-body {
+  border-top-color: #dddddd;
+  background: #C0BCB2;
+background: -moz-linear-gradient(top, #C0BCB2 0%, #C0BCB2 27%, #928C83 56%, #8F8880 60%, #605750 85%, #605750 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #C0BCB2), color-stop(27%, #C0BCB2), color-stop(56%, #928C83), color-stop(60%, #8F8880), color-stop(85%, #605750), color-stop(100%, #605750));
+background: -webkit-linear-gradient(top, #C0BCB2 0%, #C0BCB2 27%, #928C83 56%, #8F8880 60%, #605750 85%, #605750 100%);
+background: -o-linear-gradient(top, #C0BCB2 0%, #C0BCB2 27%, #928C83 56%, #8F8880 60%, #605750 85%, #605750 100%);
+background: -ms-linear-gradient(top, #C0BCB2 0%, #C0BCB2 27%, #928C83 56%, #8F8880 60%, #605750 85%, #605750 100%);
+background: linear-gradient(to bottom, #C0BCB2 0%, #C0BCB2 27%, #928C83 56%, #8F8880 60%, #605750 85%, #605750 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C0BCB2', endColorstr='#605750', GradientType=0 );
+}
+.panel-popup > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333333;
+
+}
+.panel-popup > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #dddddd;
+}
+.panel-popup > .panel-heading > .panel-title
+{
+font-weight: bold;
+color: black; 
+padding-left:10px; 
+}
+.panel-popup hr{
+  color:  #6D6C6B;
+  border-color: #6D6C6B;
+}
+
+/**********************Colledted Assest css*********************************/
+
+div.CassetImage {
+  width: 150px;
+  background-color: transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-box;
+}
+
+div.CassetImageText {
+  text-align: center;
+  padding: 10px 20px;
+  display: initial;
+}
+.CassetImageText p{
+  margin: 5px;
+  color:#ffffff;
+}
+
+.HorLayout
+{
+   display:inline-block;
+    overflow-x:auto;
+    overflow-Y:auto;
+}
+
+/********************** Assest css*********************************/
+
+div.assetImage {
+  width: 150px;
+  background-color: transparent;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  float: left;
+  
+}
+
+div.assetImageText {
+  text-align: center;
+  padding: 10px 20px;
+}
+.assetImageText p{
+  margin: 5px;
+  color:#000000;
+}
+
+pannelGradient
+{
+  background: #938a7c;
+background: -moz-linear-gradient(top, #938a7c 0%, #938a7c 17%, #938a7c 24%, #938a7c 27%, #5c5546 54%, #5c5546 66%, #5c5546 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #938a7c), color-stop(17%, #938a7c), color-stop(24%, #938a7c), color-stop(27%, #938a7c), color-stop(54%, #5c5546), color-stop(66%, #5c5546), color-stop(100%, #5c5546));
+background: -webkit-linear-gradient(top, #938a7c 0%, #938a7c 17%, #938a7c 24%, #938a7c 27%, #5c5546 54%, #5c5546 66%, #5c5546 100%);
+background: -o-linear-gradient(top, #938a7c 0%, #938a7c 17%, #938a7c 24%, #938a7c 27%, #5c5546 54%, #5c5546 66%, #5c5546 100%);
+background: -ms-linear-gradient(top, #938a7c 0%, #938a7c 17%, #938a7c 24%, #938a7c 27%, #5c5546 54%, #5c5546 66%, #5c5546 100%);
+background: linear-gradient(to bottom, #938a7c 0%, #938a7c 17%, #938a7c 24%, #938a7c 27%, #5c5546 54%, #5c5546 66%, #5c5546 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#938a7c', endColorstr='#5c5546', GradientType=0 );
+}
+
+.P10
+{
+  padding: 10px;
+}
+.P20
+{
+  padding: 20px;
+}
+.PT20
+{
+  padding-top: 20px;
+}
+.PL20
+{
+  padding-left: 20px;
+}
+.PR10
+{
+padding-right:10px;   
+}
+.W1000
+{
+  width: 1000px;
+}
+
+.btn
+{
+  border: 1px solid  black !important;
+  border-radius: 4px;
+  color: #FFFFFF;
+  padding: 10px;
+background: -moz-linear-gradient(top, #989285 0%, #989285 49%, #7a7160 50%, #7a7160 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #989285), color-stop(49%, #989285), color-stop(50%, #7a7160), color-stop(100%, #7a7160));
+background: -webkit-linear-gradient(top, #989285 0%, #989285 49%, #7a7160 50%, #7a7160 100%);
+background: -o-linear-gradient(top, #989285 0%, #989285 49%, #7a7160 50%, #7a7160 100%);
+background: -ms-linear-gradient(top, #989285 0%, #989285 49%, #7a7160 50%, #7a7160 100%);
+background: linear-gradient(to bottom, #989285 0%, #989285 49%, #7a7160 50%, #7a7160 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#989285', endColorstr='#7a7160', GradientType=0 );
+}
